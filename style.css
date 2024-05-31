@@ -1,0 +1,1068 @@
+@font-face {
+
+    font-family: "BEBAS_NEUE";
+    src: url(./fonts/bebas_neue/BebasNeue-Regular.ttf);
+
+
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap);
+}
+
+@font-face {
+    font-family: "Oxygen";
+    src: url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+}
+
+:root {
+    --eazyroxo: #55038C;
+    --eazyciano: #207285;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+.container-grid {
+    width: 80vw;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+}
+
+.banner {
+
+    height: 100vh;
+
+
+    background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(85, 3, 140, 0.5) 0%), url(img/banner.png);
+    background-position: 100%;
+
+}
+
+
+header .container-grid {
+
+
+    height: 40%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+
+.menu {
+
+    width: 720px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+
+.menu a {
+
+    font-size: 35px;
+    font-family: "BEBAS_NEUE";
+    color: white;
+
+    text-decoration: underline transparent;
+    text-decoration-thickness: 3px;
+
+    transition: text-decoration 700ms ease;
+}
+
+.menu a:hover {
+
+    text-decoration-color: white;
+}
+
+div.conteudo-banner {
+
+    font-family: "BEBAS_NEUE";
+    font-size: 42px;
+
+    color: white;
+
+
+    text-align: left;
+}
+
+
+
+div.conteudo-banner p {
+
+    animation-duration: 4s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@keyframes slidein {
+
+    from {
+        margin-left: 100%;
+        width: 200%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 90%;
+    }
+}
+
+
+
+#sobre {
+    height: 800px;
+    padding: 90px 20%;
+    width: 100%;
+
+
+    font-family: "Oxygen";
+
+    background-color: rgba(85, 3, 140, 0.5);
+    color: white;
+
+}
+
+h2 {
+
+    font-family: "BEBAS_NEUE";
+    font-size: 45px;
+
+    text-align: center;
+    line-height: 3.0;
+    padding: 20px;
+}
+
+h3 {
+
+    font-family: "BEBAS_NEUE";
+    font-size: 45px;
+
+    text-align: center;
+    line-height: 3.0;
+    padding: 20px;
+}
+
+h4 {
+
+    font-family: "BEBAS_NEUE";
+    font-size: 45px;
+
+    text-align: center;
+    line-height: 3.0;
+    padding: 20px;
+}
+#sobre p {
+
+    height: -10%;
+
+
+    font-family: "Oxygen";
+    font-size: 40px;
+
+    text-align: center;
+
+    line-height: 1.8;
+
+}
+
+#cases {
+
+    text-align: center;
+
+    padding-bottom: 00px;
+    margin-bottom: 100px;
+}
+
+#cases h3 {
+
+    margin-bottom: 70px;
+}
+
+/* .container-cards{
+
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card{
+
+    height: 500px;
+    width: 220px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 20px;
+    margin-bottom: 45px;
+
+    background: var(--eazyroxo) ;
+
+    border-radius: 6px;
+
+}
+
+.card img{
+
+    height: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.card p{
+
+    color: white;
+
+    font-family:"Roboto";
+    font-size: 17px;
+
+    text-align: center;
+
+    padding: 10%;
+} */
+
+#cases.container-grid {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+
+}
+
+div.flip-card-front {
+
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+
+
+
+}
+
+div.flip-card-back {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+
+}
+
+.flip-card {
+
+    background-color: transparent;
+    width: 90%;
+    height: 520px;
+    perspective: 1000px;
+}
+
+
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: white;
+    color: black;
+
+    outline: 4px solid var(--eazyroxo);
+}
+
+.flip-card-back {
+
+
+    font-family: "Oxygen";
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    background-color: white;
+    color: black;
+    outline: 4px solid var(--eazyroxo);
+    transform: rotateY(180deg);
+}
+
+#cognitt {
+    height: 50%;
+}
+
+#ecosoy {
+    height: 30%;
+    width: 390px;
+}
+
+#good {
+
+    height: 20%;
+    width: 410px;
+}
+
+#portfolio {
+    height: 300px;
+
+
+
+
+    background-color: #55038C;
+
+    margin-bottom: 120px;
+}
+
+
+#portfolio .container-grid {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#portfolio a {
+
+    width: fit-content;
+
+
+    color: white;
+
+    font-family: "BEBAS_NEUE";
+    font-size: 28px;
+
+    z-index: 1;
+
+    transition: 200ms;
+}
+
+#portfolio a:hover {
+
+    transform: scale(1.05);
+    transition: 200ms;
+
+}
+
+
+#contato {
+
+    text-align: center;
+
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+}
+
+#contato img {
+
+    height: 1300px;
+    position: absolute;
+    display: flex;
+    justify-content: left;
+    z-index: -1;
+
+}
+
+#contato h2 {
+
+    margin-bottom: 70px;
+
+}
+
+
+#contato form {
+
+    width: 58%;
+    height: 600px;
+
+    margin: 0 auto;
+    padding: 60px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 70px;
+    background-color: #55038C;
+
+    color: white;
+    font-family: "Oxygen";
+    font-size: 17px;
+}
+
+
+
+.campo {
+
+    width: 60%;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+
+
+}
+
+.campo-descricao {
+
+    width: 60%;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    margin-bottom: 30px;
+}
+
+.campo input {
+
+    height: 40px;
+
+    color: white;
+    background-color: #351868;
+
+    border: none;
+    border-radius: 4px;
+
+    text-indent: 10px;
+
+    outline: none;
+}
+
+.campo-descricao textarea {
+
+    color: white;
+    background-color: #351868;
+
+    border: none;
+    border-radius: 4px;
+
+    padding: 10px;
+
+    resize: none;
+}
+
+div.campo-descricao {
+
+    height: 170px;
+}
+
+div.campo-descricao label {
+
+    margin-top: 5px;
+}
+
+.campo label,
+.campo-descricao label {
+
+    margin-bottom: 10px;
+
+}
+
+.campo input,
+.campo-descricao textarea {
+
+    font-family: "Roboto";
+    font-size: 17px;
+
+}
+
+.campo input::placeholder,
+.campo-descricao textarea::placeholder {
+
+    color: #c9c9c9;
+}
+
+
+.campo input:focus,
+.campo-descricao textarea:focus {
+
+    outline: 2px solid #8e4de3;
+}
+
+div.email {
+
+    margin-bottom: 40px;
+}
+
+#contato form button {
+
+    height: 50px;
+    width: 60%;
+
+    background-color: white;
+    color: #211431;
+
+    border: none;
+    border-radius: 4px;
+
+    font-family: "Roboto";
+    font-size: 17px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: background-color 500ms;
+
+}
+
+#contato form button:hover {
+
+    background-color: #E0C8FF;
+}
+
+footer {
+
+    height: 300px;
+
+    background-color: var(--eazyroxo);
+}
+
+footer img {
+    width: 180px;
+    height: 130px;
+}
+
+footer .container-grid {
+
+    height: 290px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes-sociais {
+
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+
+}
+
+.redes-sociais p {
+
+    color: white;
+
+    font-family: "Anta";
+    font-size: 24px;
+}
+
+.icones-redes {
+
+    width: 240px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.icones-redes a {
+
+    color: white;
+}
+
+.icones-redes a:hover {
+
+    color: #211431;
+}
+
+@media screen and (max-width: 1300px) {
+
+
+    #cognitt {
+        height: 30%;
+    }
+    
+    #ecosoy {
+        height: 18%;
+        width: 190px;
+    }
+    
+    #good {
+    
+        height: 15%;
+        width: 300px;
+    }
+    
+    header {
+        position: relative;
+
+    }
+
+    header button {
+
+        width: 50px;
+
+        display: unset;
+
+        background: none;
+        border: none;
+
+    }
+
+    header svg {
+
+        fill: white;
+    }
+
+    nav.menu {
+        height: 500px;
+        width: 350px;
+
+        padding: 0px 30px;
+
+        flex-direction: column;
+        justify-content: space-around;
+
+        background-color: #212020da;
+
+        position: absolute;
+        top: 165px;
+        right: 0px;
+
+    }
+}
+
+@media screen and (max-width: 1080px) {
+
+    #contato img {
+
+        height: 1290px;
+
+        display: flex;
+        justify-content: left;
+
+    }
+
+    #cognitt {
+        height: 30%;
+    }
+
+    #ecosoy {
+        height: 15%;
+        width: 270px;
+    }
+
+    #good {
+
+        height: 10%;
+        width: 270px;
+    }
+
+    .flip-card-front {
+
+        width: 300px;
+        height: 500px;
+    }
+
+    .flip-card-back {
+
+        width: 300px;
+        height: 500px;
+
+        font-family: "Oxygen";
+        font-size: 15px;
+
+        line-height: 1.6;
+
+        background-color: white;
+        color: black;
+        outline: 4px solid var(--eazyroxo);
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-inner {
+        position: relative;
+        width: 300px;
+        height: 500px;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+
+    h2 {
+
+        font-family: "BEBAS_NEUE";
+        font-size: 40px;
+    
+        text-align: center;
+        line-height: 3.0;
+        padding: 20px;
+    }
+
+    #sobre p {
+
+        height: -10%;
+    
+    
+        font-family: "Oxygen";
+        font-size: 30px;
+    
+        text-align: center;
+    
+        line-height: 1.8;
+    
+    }
+
+    #cognitt {
+        height: 25%;
+    }
+
+    #ecosoy {
+        height: 12%;
+        width: 145px;
+    }
+
+    #good {
+
+        height: 10%;
+        width: 185px;
+    }
+
+    .flip-card-front {
+
+        width: 220px;
+        height: 350px;
+    }
+
+    .flip-card-back {
+
+        width: 200px;
+        height: 350px;
+
+        font-family: "Oxygen";
+        font-size: 13px;
+
+        line-height: 1.0;
+
+        background-color: white;
+        color: black;
+        outline: 4px solid var(--eazyroxo);
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-inner {
+        position: relative;
+        width: 200px;
+        height: 300px;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    #contato form {
+
+        width: 70%;
+        height: 600px;
+
+        margin: 0 auto;
+        padding: 60px 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border-radius: 70px;
+        background-color: #55038C;
+
+        color: white;
+        font-family: "Oxygen";
+        font-size: 17px;
+    }
+
+
+    #contato form button {
+
+        height: 40px;
+        width: 60%;
+    
+        background-color: white;
+        color: #211431;
+    
+        border: none;
+        border-radius: 4px;
+    
+        font-family: "Roboto";
+        font-size: 17px;
+        font-weight: 700;
+    
+        text-transform: uppercase;
+    
+        cursor: pointer;
+    
+        transition: background-color 500ms;
+    
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    div.container-grid img {
+
+        height: 150px;
+    }
+
+    div.conteudo-banner p {
+
+        font-size: 32px;
+        animation-duration: 4s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+    
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+
+    #cognitt {
+        height: 30%;
+    }
+
+    #ecosoy {
+        height: 18%;
+        width: 138px;
+    }
+
+    #good {
+
+        height: 10%;
+        width: 150px;
+    }
+
+    .flip-card-front {
+
+        width: 180px;
+        height: 280px;
+    }
+
+    .flip-card-back {
+
+        width: 180px;
+        height: 280px;
+
+        font-family: "Oxygen";
+        font-size: 10px;
+
+        line-height: 1.0;
+
+        background-color: white;
+        color: black;
+        outline: 4px solid var(--eazyroxo);
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-inner {
+        position: relative;
+        width: 180px;
+        height: 280px;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+
+    footer {
+
+        height: 400px;
+    
+        background-color: var(--eazyroxo);
+    }
+  #cases,
+    #contato {
+        margin-bottom: unset;
+    }
+
+    #portfolio a {
+
+        width: 100%;
+        text-align: center;
+    }
+
+    .campo,
+    .campo-descricao,
+    #contato form button {
+
+        width: 75%;
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+
+    .banner {
+
+        height: 800px;
+        width: 670px;
+       
+    
+    
+        background-image: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(85, 3, 140, 0.5) 0%), url(img/banner.png);
+        background-position: 100%;
+    
+    }
+
+    #sobre {
+        height: 800px;
+        padding: 90px 20%;
+        width: 670px;
+    
+    
+        font-family: "Oxygen";
+    
+        background-color: rgba(85, 3, 140, 0.5);
+        color: white;
+    
+    }
+    
+    #sobre p {
+
+        height: 10%;
+    
+    
+        font-family: "Oxygen";
+        font-size: 25px;
+    
+        text-align: center;
+    
+        line-height: 1.8;
+    
+    }
+
+
+    h3 {
+
+        font-family: "BEBAS_NEUE";
+        font-size: 40px;
+    
+        text-align: center;
+        line-height: 3.0;
+        padding-left: 150px;
+    }
+
+
+
+
+
+    #cases {
+padding: 20px ;
+        text-align: center;
+    
+        padding-bottom: 00px;
+        margin-bottom: 100px;
+    }
+    
+    /* 
+    .container-cards {
+
+        flex-wrap: nowrap;
+
+        gap: 40px;
+
+        overflow: auto;
+    } */
+
+    .flip-card-front {
+      
+        padding-left: 90px;
+        width: 180px;
+        height: 280px;
+    }
+
+    .flip-card-back {
+
+        width: 180px;
+        height: 280px;
+
+        font-family: "Oxygen";
+        font-size: 10px;
+
+        line-height: 1.0;
+
+        background-color: white;
+        color: black;
+        outline: 4px solid var(--eazyroxo);
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-inner {
+        position: relative;
+        width: 180px;
+        height: 280px;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+
+}
